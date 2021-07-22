@@ -1,3 +1,5 @@
+import java.awt.event.KeyEvent;
+
 public class Shape {
     private int num;
 
@@ -8,11 +10,19 @@ public class Shape {
     public int getNum(){
         return num;
     }
+/* 
+    public boolean keyPressed(KeyEvent event){
+        if(event.getKeyCode()== KeyEvent.VK_LEFT){
+        return false;
+        }
+        if(event.getKeyCode()== KeyEvent.VK_RIGHT){
+        return true;
+    }
+        return false;
+} */
 
     public void printShape(){ 
-       // pyramid();
-       //square();
-      // circle();
+    
             System.out.println( "My new number is " + this.num);
             switch(num){
             case 0: pyramid(); break;
