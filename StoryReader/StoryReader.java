@@ -1,6 +1,8 @@
 import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.util.Scanner; // Import the Scanner class to read text files
+import java.util.concurrent.TimeUnit;
+
 
 public class StringOccurrence {
   public static String fileToString(String filePath){
@@ -21,13 +23,21 @@ public class StringOccurrence {
      }
      return sb.toString();
   }
-  public static void main(String args[]) throws FileNotFoundException {
+
+//Prints out a word every second
+  public static void printWithDelays(String arr[], TimeUnit unit, long delay)
+        throws InterruptedException {
+        for(String token : arr) {
+            System.out.println(" ");
+            System.out.println(token);
+            unit.sleep(delay);
+       }
+   }
+  public static void main(String args[]) throws FileNotFoundException, InterruptedException{
      String filePath = "/users/terrylight/revature/p0/storyreader/poem.txt";
      String txt = fileToString(filePath);
      String arr[] = txt.split(" ");
-     for(String token : arr) {
-        System.out.println(" ");
-        System.out.println(token);
-     }
+     printWithDelays(arr, TimeUnit.MILLISECONDS, 1000);
+
   }
 }
