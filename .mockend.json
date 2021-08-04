@@ -1,5 +1,4 @@
-{
-   "Leaders":[
+
       {
          "userId": 1,
          "id": 1,
@@ -549,12 +548,4 @@
          "id":0,
          "title":"Imagination",
          "body":"Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world."
-      },
-	{
-         "userId":0,
-         "id":1,
-         "title":"Life",
-         "body":"Man suffers only because he takes seriously what the gods made for fun."
       }
-    ]
-}
